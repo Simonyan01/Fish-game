@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Fish game</title>
+  </head>
+  <body>
+    <canvas></canvas>
+    <script type="importmap">
+      {
+        "imports": {
+          "game": "./src/game.js",
+          "fish": "./src/fish.js",
+          "utils": "./src/utils.js",
+          "rival-fishes": "./src/rival-fishes.js"
+        }
+      }
+    </script>
+    <script type="module">
+      import { Game } from "game"
+
+      const app = new Game()
+      app.start()
+    </script>
+  </body>
+</html>
